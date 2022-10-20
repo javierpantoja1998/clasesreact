@@ -3,14 +3,18 @@ import {Component} from 'react';
 
 class HijoNumero extends Component {
 
-    //Creamos la variable para los numeros aleatorios
-    num = Math.floor(Math.random()*20;
+    render(){
+        return (
+            <div>
+                <h1 style={{color:"fuchsia"}}>Soy hijo</h1>
 
-
-    numeroRandom = () => {
-
-        this.setState({
-           
-        })
+                <button onClick={this.suma}>
+                    Sumar
+                </button>
+                
+                suma (this.props.numero)
+            </div>
+        )
     }
 }
+export default HijoNumero;

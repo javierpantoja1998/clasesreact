@@ -1,19 +1,24 @@
 //Debemos importat components from react
 import {Component} from 'react';
+import HijoNumero from './HijoNumero';
 
 class Numeros extends Component {
     
     //Creamos un array de numeros en state para despues dibujarlo
     state = {
-        numerosArray:[],
+        numerosArray: [],
         suma:""
     }
     añadirHijo  = () => {
-        this.setState({
-            f
-        })
-          = this.state.numerosArray;
+       this.state.numerosArray.push(Math.floor(Math.random()*100));
+
+        this.setState({numerosArray:this.state.numerosArray})
+        
     }
+    
+    suma  = (valor) => {
+        this.setState({suma:this.state.suma + valor})
+    }   
 
     render(){
         return(
@@ -21,6 +26,16 @@ class Numeros extends Component {
                 <h1>Numeros padre</h1>
                 <h2 style = {{color:"fuchsia"}}>La suma es:</h2>
                 <button onClick={this.añadirHijo}></button>
+
+                {
+                    this.state.numerosArray.map((entero, index)=>{
+                        return(
+                            <HijoNumero numero={entero} key={index} suma={this.suma}></HijoNumero>
+                        )
+                    })
+
+                    
+                }
             </div>
         )
     }
