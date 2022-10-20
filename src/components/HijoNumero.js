@@ -9,10 +9,10 @@ class HijoNumero extends Component {
                 <h1 style={{color:"fuchsia"}}>Soy hijo</h1>
 
                 <button onClick={this.suma}>
-                    Sumar
+                    Sumar (this.props.numero)
                 </button>
                 
-                suma (this.props.numero)
+                
             </div>
         )
     }

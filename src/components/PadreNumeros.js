@@ -2,7 +2,7 @@
 import {Component} from 'react';
 import HijoNumero from './HijoNumero';
 
-class Numeros extends Component {
+class PadreNumeros extends Component {
     
     //Creamos un array de numeros en state para despues dibujarlo
     state = {
@@ -40,3 +40,4 @@ class Numeros extends Component {
         )
     }
 }
+export default PadreNumeros;
